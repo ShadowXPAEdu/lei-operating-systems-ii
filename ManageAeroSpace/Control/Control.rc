@@ -1,0 +1,252 @@
+// Microsoft Visual C++ generated resource script.
+//
+#pragma code_page(65001)
+
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "Airport"
+    BEGIN
+        MENUITEM "Add airport",                 ID_AIRPORT_ADDAIRPORT
+        MENUITEM "Remove airport",              ID_AIRPORT_REMOVEAIRPORT
+    END
+    POPUP "List"
+    BEGIN
+        MENUITEM "Airport",                     ID_LIST_AIRPORT
+        MENUITEM "Airplane",                    ID_LIST_AIRPLANE
+        MENUITEM "Passenger",                   ID_LIST_PASSENGER
+    END
+    POPUP "Other"
+    BEGIN
+        MENUITEM "Toggle",                      ID_TOGGLE
+        MENUITEM "View config",                 ID_VIEWCONFIG
+        MENUITEM "Kick airplane",               ID_KICKAIRPLANE
+        MENUITEM "About",                       ID_OTHER_ABOUT
+        MENUITEM "Exit",                        ID_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_AIRPORT             BITMAP                  "..\\..\\airport.bmp"
+
+IDB_AIRPLANE            BITMAP                  "..\\..\\airplane.bmp"
+
+IDB_ARROWS              BITMAP                  "..\\..\\arrows.bmp"
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Portuguese (Portugal) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PTG)
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ADD_AIRPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 288
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 528
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 181
+    END
+
+    IDD_REMOVE_AIRPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 252
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 43
+    END
+
+    IDD_KICK_AIRPLANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ADD_AIRPORT DIALOGEX 0, 0, 295, 108
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add airport"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,175,87,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,238,87,50,14
+    LTEXT           "Enter the name of the airport:",IDC_STATIC,15,15,98,8
+    EDITTEXT        IDC_EDIT1,14,26,248,14,ES_AUTOHSCROLL
+    LTEXT           "Enter the coordinates:",IDC_STATIC,15,46,73,8
+    EDITTEXT        IDC_EDIT2,24,58,40,14,ES_AUTOHSCROLL
+    LTEXT           "X:",IDC_STATIC,16,60,8,8
+    LTEXT           "Y:",IDC_STATIC,16,76,8,8
+    EDITTEXT        IDC_EDIT3,24,74,40,14,ES_AUTOHSCROLL
+END
+
+IDD_LIST DIALOGEX 0, 0, 535, 188
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "List"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,478,167,50,14
+    LISTBOX         IDC_LIST_ITEMS,7,7,521,138,NOT LBS_NOTIFY | LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+END
+
+IDD_REMOVE_AIRPORT DIALOGEX 0, 0, 259, 50
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Delete airport"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,143,29,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,199,29,50,14
+    LTEXT           "Enter the ID of the airport:",IDC_STATIC,7,7,88,8
+    EDITTEXT        IDC_DEL_EDIT,7,18,86,14,ES_AUTOHSCROLL
+END
+
+IDD_KICK_AIRPLANE DIALOGEX 0, 0, 255, 54
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Kick airplane"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,146,33,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,198,33,50,14
+    LTEXT           "Enter the ID of the airplane:",IDC_STATIC,7,7,92,8
+    EDITTEXT        IDC_KICK_EDIT,7,17,91,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ADD_AIRPORT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_LIST AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_REMOVE_AIRPORT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_KICK_AIRPLANE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDB_PNG1                PNG                     "..\\..\\Icon.png"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "..\\..\\Icon.ico"
+
+#endif    // Portuguese (Portugal) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
